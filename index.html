@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	
+	<title>Forever 21</title>
+
+	<meta name="description" content="Colector para la tienda Forever 21">
+
+	<meta name="theme-color" content="#F0DB4F"> <!--Color barra del navegador-->
+	
+	<meta name="MobileOptimized" content="width">
+	<meta name="HandheldFriendly" content="true"> <!-- Sitio amigable para navegadores moviles -->
+	
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"> <!-- Para telefonos iphone -->
+
+	<link rel="shortcut icon" type="image/png" href="./img/aj.png"> <!-- Icono -->
+	<link rel="apple-touch-icon" href="./logo.png"> <!-- Icono en la pantalla de los dispositivos -->
+    <link rel="apple-touch-startup-image" href="./aj.png"> <!-- Imagen que se carga al abrir el app -->
+
+	<link rel="manifest" href="./manifest.json"> <!--  -->
+	
+
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	
+	<div class="container">
+			<br>
+			
+			<header>
+				<nav class="navbar navbar-default navbar-fixed-top navbar-inverse">
+					<div class="container-fluid">
+						<div class="navbar-header">
+							<!-- <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-1">
+								<span class="sr-only">Menu</span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button> -->
+
+							<!-- <a href="#" class="navbar-brand">Forever 21</a> -->
+						</div>
+						<div class="collapse navbar-collapse" id="navbar-1">
+							<!-- <ul class="nav navbar-nav">
+								<li><a href="">INICIO</a></li>
+							</ul> -->
+						</div>
+					</div>
+				</nav>
+			</header>
+	
+			<br>
+			<br>
+			<br>
+
+
+			<!-- Imagen -->
+			<section>
+				<div class="row">
+					<div class="col-md-12 col-sm-12 col-xs-12">
+						<img id="img" src="img/forever.jpg" alt="" height= "" width="">
+					</div>
+				</div>
+			</section>
+
+			<br>
+			<br>
+			<br>
+
+			<!-- Money Mapping -->
+			<section id ="money">
+				<div class="row">
+					<div class="col-md-12 col-sm-12 col-xs-12 text-center">
+						<button class="btn btn-primary money">MONEY MAPPING</button>
+					</div>
+				</div>
+
+				<br>
+				<br>
+				<br>
+			</section>
+
+			
+			<!-- Opciones -->
+			<section id ="secciones">
+				<div class="row">
+					<div class="col-md-12 col-sm-12 col-xs-12 text-center">
+						<h3>Qué deseas realizar?</h3>
+
+						<br>
+
+						<button id="btnLigarArticulos" class="btn btn-success">
+							<span class="glyphicon glyphicon-ok-circle"></span>
+							 LIGAR ARTÍCULOS
+						</button>
+
+						<br><br>
+
+						<button id= "btnDesligarArticulos" class="btn btn-danger">
+							<span class="glyphicon glyphicon-remove-circle"></span>
+							 DESLIGAR ARTÍCULOS
+						</button>
+					</div>
+				</div>
+
+				<br>
+				<br>
+				<br>
+			</section>
+
+
+			<!-- Ligar Articulos -->
+			<section id = "ligarArticulos">
+				<div class="row">
+					<div class="col-md-12 col-sm-12 col-xs-12 text-center">
+						<h3>Leer Cod Mueble</h3>
+
+						<br>
+							<div id="resgistroMueble" class="col-md-12 col-sm-12 col-xs-12">
+								<div class="alert alert-success text-center">
+									<strong>Mueble no registrado</strong>
+								</div>
+							</div>
+						<br>
+
+					
+						<div class="form-group">
+							<div class="col-md-12">
+								<input class="form-control" id="textMueble" type="text">
+							</div>
+						</div>
+					
+						
+						<br><br>
+
+						<button id="atrasLigarArticulos" class="btn btn-info">
+							<span class="glyphicon glyphicon-circle-arrow-left"></span>
+							Atrás
+						</button>
+					</div>
+				</div>
+
+				<br>
+				<br>
+				<br>
+			</section>
+
+
+
+			<!-- Colector de Artículos -->
+			<section id = "colectorArticulos">
+				<div class="row">
+					<div class="col-md-12 col-sm-12 col-xs-12 text-center">
+						<div id="mueblesZonaAmb" class="row">
+						</div>
+
+						<br>
+
+						<div class="form-group">
+							<div class="col-md-10">
+								<input class="form-control" id="textColecArticulos" type="text">
+							</div>
+						</div>
+
+
+						<br>
+						<h3>Artículos Colectados:</h3>
+
+						<br>
+
+
+						<form id="listaArticulos" >
+							<div id="datosMueble" style="display: none;">	
+							</div>
+						
+							<div id="articulosSeleccionados" class="text-justify">
+							</div>
+					
+							<br><br>
+						
+							<a href="#confLigarArticulos" class="btn btn-success" data-toggle="modal">
+								<span class="glyphicon glyphicon-ok-circle"></span>
+								CONFIMAR
+							</a>
+
+							<br><br>
+
+							<a href="#canLigarArticulos" class="btn btn-danger" data-toggle="modal">
+								<span class="glyphicon glyphicon-remove-circle"></span>
+								CANCELAR
+							</a>
+
+						</form>
+					</div>
+				</div>
+
+				<br>
+				<br>
+				<br>
+			</section>
+
+			
+			<!-- Desligar  -->
+			<section id = "desligar">
+				<div class="row">
+					<div class="col-md-12 col-sm-12 col-xs-12 text-center">
+						<h3>Seleccionar:</h3>
+
+						<br>
+
+						<button id="btnDesligarPorArticulos" class="btn btn-danger">
+							<span class="glyphicon glyphicon-remove-circle"></span>
+							Desligar por Artículos
+						</button>
+
+						<br><br>
+
+						<button id= "btnDesligarPorMuebles" class="btn btn-danger">
+							<span class="glyphicon glyphicon-remove-circle"></span>
+							Desligar por Muebles
+						</button>
+
+						<br><br>
+
+						<button id="atrasDesligarArticulos" class="btn btn-info">
+							<span class="glyphicon glyphicon-circle-arrow-left"></span>
+							Atrás
+						</button>
+					</div>
+				</div>
+
+				<br>
+				<br>
+				<br>
+			</section>
+
+
+
+			<!-- Desligar por Artículos-->
+			<section id = "desligarArticulos">
+				<div class="row">
+					<div class="col-md-12 col-sm-12 col-xs-12 text-center">
+						<h3>Deposito / Deposito</h3>
+
+						<br>
+
+						<div class="form-group">
+							<div class="col-md-10">
+								<input class="form-control" id="textDesligarArticulos" type="text">
+							</div>
+						</div>
+
+						<br>
+						<h4>Artículos Colectados:</h4>
+
+						<br>
+
+
+						<form id="listaArticulosDesligar" >
+							<div id="articulosSeleccionadosDesligar" class="text-justify">
+							</div>
+					
+							<br><br>
+
+							<a href="#confDesligarArticulos" class="btn btn-success" data-toggle="modal">
+								<span class="glyphicon glyphicon-ok-circle"></span>
+								CONFIMAR
+							</a>
+
+							<br><br>
+
+							<a href="#canDesligarArticulos" class="btn btn-danger" data-toggle="modal">
+								<span class="glyphicon glyphicon-remove-circle"></span>
+								CANCELAR
+							</a>
+						</form>
+					</div>
+				</div>
+
+				<br>
+				<br>
+				<br>
+			</section>
+
+
+
+			<!-- desligar POR MUEBLE -->
+			<section id = "desligarMuebles">
+				<div class="row">
+					<div class="col-md-12 col-sm-12 col-xs-12 text-center">
+						<h3>Leer Cod Mueble</h3>
+
+						<br>
+							<div id="resgistroMuebleDes" class="col-md-12 col-sm-12 col-xs-12">
+								<div class="alert alert-success text-center">
+									<strong>Mueble no registrado</strong>
+								</div>
+							</div>
+						<br>
+
+					
+						<div class="form-group">
+							<div class="col-md-12">
+								<input class="form-control" id="textMuebleDes" type="text">
+							</div>
+						</div>
+					
+						
+						<br><br>
+
+						<button id="atrasDesligarPorMuebles" class="btn btn-info">
+							<span class="glyphicon glyphicon-circle-arrow-left"></span>
+							Atrás
+						</button>
+					</div>
+				</div>
+
+				<br>
+				<br>
+				<br>
+			</section>
+
+		
+
+			<!-- Desligando Muebles-->
+			<section id="desligandoMueble">
+				<div class="row">
+					<div class="col-md-12 col-sm-12 col-xs-12 text-center">
+						<h3>Desligar Muebles</h3>
+
+						<br>
+					
+
+						<div id="infoMuebleDes" class="row">
+						</div>
+
+						<br>
+						<br>
+
+						<form id="MuebleDesligar" >
+
+							<div id="codMuebleDesligar">	
+							</div>
+						
+
+							<a href="#confDesligarMueble" class="btn btn-success" data-toggle="modal">
+								<span class="glyphicon glyphicon-ok-circle"></span>
+								CONFIMAR
+							</a>
+
+							<br><br>
+
+							<a href="#canDesligarMueble" class="btn btn-danger" data-toggle="modal">
+								<span class="glyphicon glyphicon-remove-circle"></span>
+								CANCELAR
+							</a>
+						</form>
+					</div>
+				</div>
+			</section>
+	</div>
+
+
+	<!-- MENSAJES -->
+	<div>
+		<div id="LArticulo" class="col-md-12 col-sm-12 col-xs-12">
+			<div class="alert alert-success text-center">
+				<strong>Procesando DATOS.. aguarde un momento..</strong>
+			</div>
+		</div>
+
+		<div id="dArticulo"class="col-md-12 col-sm-12 col-xs-12">
+			<div class="alert alert-success text-center">
+				<strong>Desligando Artículo.. aguarde un momento..</strong>
+			</div>
+		</div>
+
+		<div id="dMueble" class="col-md-12 col-sm-12 col-xs-12">
+			<div  class="alert alert-success text-center">
+				<strong>Desligando Mueble.. aguarde un momento..</strong>
+			</div>
+		</div>
+	</div>
+
+
+	
+	<!-- MODALS -->
+	<div>
+		<div class="modal fade" id="confLigarArticulos">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<!-- Header de la Ventana -->
+					<div class="modal-header text-center">
+						<h2  class="modal-title"><strong>Confirmar</strong></h2>
+					</div>
+
+					<!-- Contenido de la Ventana -->
+					<div class="modal-body text-center">
+						<p>
+							Esás seguro que deseas ligar los datos procesados?
+						</p>
+					</div>
+
+					<!-- Footer de la Ventana -->
+					<div class="modal-footer ">
+						<div class="text-center">
+							<button id="siConfirmLigarArticulo" type="button" class="btn btn-primary" data-dismiss="modal">Si</button>
+							<button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="modal fade" id="canLigarArticulos">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<!-- Header de la Ventana -->
+					<div class="modal-header text-center">
+						<h2  class="modal-title"><strong>Cancelar</strong></h2>
+					</div>
+
+					<!-- Contenido de la Ventana -->
+					<div class="modal-body text-center">
+						<p>
+							Esás seguro que deseas cancelar esta operación?
+						</p>
+					</div>
+
+					<!-- Footer de la Ventana -->
+					<div class="modal-footer ">
+						<div class="text-center">
+							<button id="siCancelLigarArticulo" type="button" class="btn btn-primary" data-dismiss="modal">Si</button>
+							<button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="modal fade" id="confDesligarArticulos">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<!-- Header de la Ventana -->
+					<div class="modal-header text-center">
+						<h2  class="modal-title"><strong>Confirmar</strong></h2>
+					</div>
+
+					<!-- Contenido de la Ventana -->
+					<div class="modal-body text-center">
+						<p>
+							Esás seguro que deseas desligar el artículo?
+						</p>
+					</div>
+
+					<!-- Footer de la Ventana -->
+					<div class="modal-footer ">
+						<div class="text-center">
+							<button id="siConfirmDesligarArticulo" type="button" class="btn btn-primary" data-dismiss="modal">Si</button>
+							<button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="modal fade" id="canDesligarArticulos">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<!-- Header de la Ventana -->
+					<div class="modal-header text-center">
+						<h2  class="modal-title"><strong>Cancelar</strong></h2>
+					</div>
+
+					<!-- Contenido de la Ventana -->
+					<div class="modal-body text-center">
+						<p>
+							Esás seguro que deseas cancelar esta operación?
+						</p>
+					</div>
+
+					<!-- Footer de la Ventana -->
+					<div class="modal-footer ">
+						<div class="text-center">
+							<button id="siCancelDesligarArticulo" type="button" class="btn btn-primary" data-dismiss="modal">Si</button>
+							<button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="modal fade" id="confDesligarMueble">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<!-- Header de la Ventana -->
+					<div class="modal-header text-center">
+						<h2  class="modal-title"><strong>Confirmar</strong></h2>
+					</div>
+
+					<!-- Contenido de la Ventana -->
+					<div class="modal-body text-center">
+						<p>
+							Esás seguro que deseas desligar el Mueble?
+						</p>
+					</div>
+
+					<!-- Footer de la Ventana -->
+					<div class="modal-footer ">
+						<div class="text-center">
+							<button id="siConfirmDesligarMueble" type="button" class="btn btn-primary" data-dismiss="modal">Si</button>
+							<button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="modal fade" id="canDesligarMueble">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<!-- Header de la Ventana -->
+					<div class="modal-header text-center">
+						<h2  class="modal-title"><strong>Cancelar</strong></h2>
+					</div>
+
+					<!-- Contenido de la Ventana -->
+					<div class="modal-body text-center">
+						<p>
+							Esás seguro que deseas cancelar esta operación?
+						</p>
+					</div>
+
+					<!-- Footer de la Ventana -->
+					<div class="modal-footer ">
+						<div class="text-center">
+							<button id="siCancelDesligarMueble" type="button" class="btn btn-primary" data-dismiss="modal">Si</button>
+							<button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+<script src="script.js"></script>
+
+	
+	<script src="js/jquery.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+
+
+	<script src="despacher/controller.js"></script>
+
+	<!--  -->
+</body>
+</html>

@@ -1,0 +1,18 @@
+img {
+	width: 100%;
+	height: auto;
+}
+
+ul { 
+	list-style: none; 
+}
+
+#secciones, #ligarArticulos, #colectorArticulos, #desligar, 
+		#desligarArticulos, #LArticulo, #desligarMuebles, #dArticulo, #dMueble{
+	display: none;
+}
+
+
+#resgistroMueble, #desligandoMueble, #resgistroMuebleDes{
+	display:none;
+}
